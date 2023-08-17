@@ -22,10 +22,11 @@ app.use(session({
 
 
 
+app.set("trust proxy", 1);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({origin:true,credentials:true}))
+app.use(cors({origin:"https://deploy123.onrender.com",credentials:true}))
 app.use(cookieParser())
 
 
