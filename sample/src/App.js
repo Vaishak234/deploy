@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
    
     const fetch = async() => {
-      const res = await axios.get('http://localhost:4000/start', { withCredentials: true })
+      const res = await axios.get('https://deploy-auts.onrender.com/start', { withCredentials: true })
       console.log(res.data);
     }
 
