@@ -7,14 +7,16 @@ const cookieParser = require('cookie-parser')
 
 
 const app = express();
-const port = 4000
+const port =  4000
 
 app.use(session({
    secret: 'secret for session',
    resave: true,
    saveUninitialized:true,
    cookie: {
-      maxAge:24*60 *60*1000*7
+       maxAge: 24 * 60 * 60 * 1000 * 7,
+       secure: true,
+       sameSite:"none"
    }
 }))
 
